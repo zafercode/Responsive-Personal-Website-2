@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <title>Responsive Personal Website</title>
+    <title>Zafer Kalik Portfolio Website</title>
 
     <!-- favicon link  -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.ico">
@@ -14,8 +14,38 @@
     
     <!-- css custom file -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .language-switcher button {
+            margin: 0 5px;
+            padding: 10px;
+            border: none;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .language-switcher button.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="tr-btn" class="active">TR</button>
+        <button id="en-btn">EN</button>
+    </div>
+
     <!-- header section starts -->
     
     <header>
@@ -28,11 +58,11 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#about">Hakkımda</a></li>
-                <li><a href="#education">Eğitim</a></li>
-                <li><a href="#works">Çalışmalar</a></li>
-                <li><a href="#contact">İletişim</a></li>
+                <li><a href="#home" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+                <li><a href="#about" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                <li><a href="#education" data-tr="Eğitim" data-en="Education">Eğitim</a></li>
+                <li><a href="#works" data-tr="Çalışmalar" data-en="Works">Çalışmalar</a></li>
+                <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
             </ul>
         </nav>
     </header>
@@ -46,10 +76,10 @@
 
     <section class="home" id="home">
 
-        <h3>Merhaba </h3>
-        <h1>Ben <span>Zafer Kalik</span></h1>
-        <p>Front-end geliştirmeye adeta hastalık derecesinde bağlı. Gelişime açık. Yeni teknolojilere uyum sağlayabilen. Yeni şeyler öğrendikçe mutlu olan biriyim. Genel anlamda böyle tanımlayabiliriz. İşime sadık ve en iyisini sunmak konusunda iddialıyım.</p>
-        <a href="#about"><button class="btn">Hakkımda <i class="fas fa-user"></i></button></a>
+        <h3 data-tr="Merhaba" data-en="Hello">Merhaba</h3>
+        <h1 data-tr="Ben <span>Zafer Kalik</span>" data-en="I am <span>Zafer Kalik</span>">Ben <span>Zafer Kalik</span></h1>
+        <p data-tr="Front-end geliştirmeye adeta hastalık derecesinde bağlı. Gelişime açık. Yeni teknolojilere uyum sağlayabilen. Yeni şeyler öğrendikçe mutlu olan biriyim. Genel anlamda böyle tanımlayabiliriz. İşime sadık ve en iyisini sunmak konusunda iddialıyım." data-en="I am passionate about front-end development, eager to grow, and adaptable to new technologies. Learning new things makes me happy. I am committed to my work and strive to deliver the best.">Front-end geliştirmeye adeta hastalık derecesinde bağlı. Gelişime açık. Yeni teknolojilere uyum sağlayabilen. Yeni şeyler öğrendikçe mutlu olan biriyim. Genel anlamda böyle tanımlayabiliriz. İşime sadık ve en iyisini sunmak konusunda iddialıyım.</p>
+        <a href="#about"><button class="btn" data-tr="Hakkımda" data-en="About">Hakkımda <i class="fas fa-user"></i></button></a>
 
         <div class="social-links">
             <a href="https://twitter.com/developerofgod" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -63,164 +93,130 @@
 
     <!-- home section ends  -->
 
-
     <!-- about section starts  -->
 
     <section class="about" id="about">
 
-
-        <h1 class="heading"><span>Hakkımda</span></h1>
+        <h1 class="heading" data-tr="Hakkımda" data-en="About"><span>Hakkımda</span></h1>
 
         <div class="row">
 
             <div class="info">
-                <h3><span>İsmim :</span>Zafer Kalik</h3>
-                <h3><span>Yaş :</span>29</h3>
-                <h3><span>Beceriler :</span>Html5, Css3, JavaScript</h3>
-                <h3><span>Meslek :</span>Front-end Developer</h3>
-                <h3><span>Diller :</span>Türkçe, İngilizce</h3>
-                <a href="assets/images/resume.pdf" target="_blank" download="zaferkalik.resume.pdf"><button class="btn">Cv indir <i class="fas fa-download"></i></button></a>
+                <h3 data-tr="İsmim :" data-en="Name :"><span>İsmim :</span> Zafer Kalik</h3>
+                <h3 data-tr="Yaş :" data-en="Age :"><span>Yaş :</span> 29</h3>
+                <h3 data-tr="Beceriler :" data-en="Skills :"><span>Beceriler :</span> Html5, Css3, JavaScript</h3>
+                <h3 data-tr="Meslek :" data-en="Profession :"><span>Meslek :</span> Front-end Developer</h3>
+                <h3 data-tr="Diller :" data-en="Languages :"><span>Diller :</span> Türkçe, İngilizce</h3>
+                <a href="assets/images/ZaferKalikCv-Resume.pdf" target="_blank" download="zaferkalik.resume.pdf"><button class="btn" data-tr="Cv indir" data-en="Download CV">Cv indir <i class="fas fa-download"></i></button></a>
             </div>
 
             <div class="counter">
 
                 <div class="box">
                     <span>2+</span>
-                    <h3>Yıl Tecrübe</h3>
+                    <h3 data-tr="Yıl Tecrübe" data-en="Years Experience">Yıl Tecrübe</h3>
                 </div>
 
                 <div class="box">
                     <span>30+</span>
-                    <h3>Proje Yapıldı</h3>
+                    <h3 data-tr="Proje Yapıldı" data-en="Projects Completed">Proje Yapıldı</h3>
                 </div>
 
                 <div class="box">
                     <span>120+</span>
-                    <h3>Mutlu müşteri</h3>
+                    <h3 data-tr="Mutlu müşteri" data-en="Happy Clients">Mutlu müşteri</h3>
                 </div>
 
                 <div class="box">
                     <span>5+</span>
-                    <h3>Başarı kazanıldı</h3>
+                    <h3 data-tr="Başarı kazanıldı" data-en="Awards Earned">Başarı kazanıldı</h3>
                 </div>
-
 
             </div>
         </div>
 
-
     </section>
 
-
-
     <!-- about section ends  -->
-
 
     <!-- education section starts  -->
 
     <section class="education" id="education">
 
-    <h1 class="heading"><span>Eğitimim</span></h1>
+        <h1 class="heading" data-tr="Eğitimim" data-en="My Education"><span>Eğitimim</span></h1>
 
-    <div class="box-container">
+        <div class="box-container">
 
-        <div class="box">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>2021</span>
-            <h3>Front-end Development</h3>
-            <p>2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut.</p>
+            <div class="box">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>2021</span>
+                <h3 data-tr="Front-end Development" data-en="Front-end Development">Front-end Development</h3>
+                <p data-tr="2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut." data-en="Since 2021, I have been working as a front-end developer. I have worked on freelance projects, and many of my projects are on my GitHub profile. I have experience with front-end development for e-commerce sites, blogs, and static websites.">2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut.</p>
 
-        </div>
+            </div>
 
-        <div class="box">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>2021</span>
-            <h3>Front-end Development</h3>
-            <p>2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut.</p>
+            <div class="box">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>2021</span>
+                <h3 data-tr="Front-end Development" data-en="Front-end Development">Front-end Development</h3>
+                <p data-tr="2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut." data-en="Since 2021, I have been working as a front-end developer. I have worked on freelance projects, and many of my projects are on my GitHub profile. I have experience with front-end development for e-commerce sites, blogs, and static websites.">2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut.</p>
 
-        </div>
-
-        <div class="box">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>2021</span>
-            <h3>Front-end Development</h3>
-            <p>2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut.</p>
+            </div>
 
         </div>
-
-        <div class="box">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>2021</span>
-            <h3>Front-end Development</h3>
-            <p>2021 yılından beri front-end developer olarak çalışmaktayım. Freelance işler yaptım. Ayrıca Birçok projem github profilimde yer alıyor .E-ticaret sitelerinin front-end tarafı. Blog ve static websitelerde dahil birçok projem mevcut.</p>
-
-        </div>
-    </div>
 
     </section>
 
     <!-- education section ends  -->
 
-
     <!-- works section starts  -->
 
     <section class="works" id="works">
 
-    <h1 class="heading"><span>Çalışmalarım</span></h1>
+        <h1 class="heading" data-tr="Çalışmalarım" data-en="My Works"><span>Çalışmalarım</span></h1>
 
-    <div class="box-container">
+        <div class="box-container">
 
-        <div class="box">
-            <a href="https://groceryy.netlify.app/" target="_blank"><img src="assets/images/grocery-store.PNG" alt=""></a>
+            <div class="box">
+                <a href="https://groceryy.netlify.app/" target="_blank"><img src="assets/images/grocery-store.PNG" alt=""></a>
+            </div>
+
+            <div class="box">
+                <a href="https://zaferkalik.netlify.app/" target="_blank"><img src="assets/images/personal-website-1.png" alt=""></a>
+            </div>
+
         </div>
-
-        <div class="box">
-            <a href="https://zaferkalik.netlify.app/" target="_blank"><img src="assets/images/personal-website-1.png" alt=""></a>
-        </div>
-
-        <div class="box">
-            <a href="https://responsive-restaurant-websitee.netlify.app/" target="_blank"><img src="assets/images/preview-restaurant.PNG" alt=""></a>
-        </div>
-
-        <div class="box">
-            <a href="http://www.norviahotels.com.tr/" target="_blank"><img src="assets/images/norvia-otel.png" alt=""></a>
-        </div>
-
-        <div class="box">
-            <a href="https://coffe-shop-responsive.netlify.app/" target="_blank"><img src="assets/images/coffee-shop.PNG" alt=""></a>
-        </div>
-    </div>
 
     </section>
-    <!-- work section ends  -->
+    <!-- works section ends  -->
 
     <!-- contact section starts  -->
 
     <section class="contact" id="contact">
 
-        <h1 class="heading"><span>İletişim</span></h1>
+        <h1 class="heading" data-tr="İletişim" data-en="Contact"><span>İletişim</span></h1>
 
         <div class="row">
 
             <div class="content">
 
-                <h3 class="title">İletişim Bilgilerim</h3>
+                <h3 class="title" data-tr="İletişim Bilgilerim" data-en="Contact Information">İletişim Bilgilerim</h3>
 
                 <div class="info">
-                    <a href=""><h3><i class="fas fa-envelope"></i>zaferkalik@gmail.com</h3></a>
+                    <a href="mailto:zaferkalik@gmail.com"><h3><i class="fas fa-envelope"></i>zaferkalik@gmail.com</h3></a>
                     <a href="tel:+095316920279"><h3><i class="fas fa-phone"></i>+90 531 692 02 79</h3></a>
-                    <a href="https://t.me/Zaferkalik"><h3><i class="fa-brands fa-telegram"></i></i>Telegram'dan mesaj atın</h3></a>
-                    <a href=""><h3><i class="fas fa-map-marker-alt"></i>Adana,Turkey</h3></a>
+                    <a href="https://t.me/Zaferkalik"><h3><i class="fa-brands fa-telegram"></i> Telegram'dan mesaj atın</h3></a>
+                    <a href=""><h3><i class="fas fa-map-marker-alt"></i>Adana, Turkey</h3></a>
                 </div>
             </div>
 
             <form action="https://formspree.io/f/xrgjvdpe" method="POST">
 
-                <input type="text" name="name"  placeholder="Adınız" class="box" required>
+                <input type="text" name="name" placeholder="Adınız" class="box" required>
                 <input type="email" name="email" placeholder="Email" class="box" required>
                 <input type="text" name="konu" placeholder="Konu" class="box" required>
-                <textarea name="message" id="" cols="30" rows="10" class="box message" placeholder="Mesajınız" required></textarea>
-                <button type="submit" class="btn">Gönder <i class="fas fa-paper-plane"></i></button>
+                <textarea name="message" cols="30" rows="10" class="box message" placeholder="Mesajınız" required></textarea>
+                <button type="submit" class="btn" data-tr="Gönder" data-en="Send">Gönder <i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
 
@@ -228,16 +224,11 @@
 
     <!-- contact section ends  -->
 
-
     <!-- credit  -->
 
     <div class="credit">
         <h3>© Copyright 2022 Zafer Kalik. Tüm hakları saklıdır.</h3>
     </div>
-
-    
-
-
 
     <!-- scroll top button  -->
 
@@ -245,32 +236,30 @@
         <img src="assets/images/scroll-top-img.png" alt="">
     </a>
 
+    <!-- Add JavaScript to handle language switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const trBtn = document.getElementById('tr-btn');
+            const enBtn = document.getElementById('en-btn');
+            const translatableElements = document.querySelectorAll('[data-tr]');
 
+            function switchLanguage(language) {
+                translatableElements.forEach(element => {
+                    element.innerHTML = element.getAttribute(`data-${language}`);
+                });
+                if (language === 'en') {
+                    trBtn.classList.remove('active');
+                    enBtn.classList.add('active');
+                } else {
+                    enBtn.classList.remove('active');
+                    trBtn.classList.add('active');
+                }
+            }
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- jquery cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            trBtn.addEventListener('click', () => switchLanguage('tr'));
+            enBtn.addEventListener('click', () => switchLanguage('en'));
+        });
+    </script>
 
     <!-- custom js file link  -->
     <script src="assets/js/script.js"></script>
